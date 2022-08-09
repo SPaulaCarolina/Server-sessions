@@ -1,0 +1,26 @@
+{
+	"entities": {
+		"author": {
+			"paulacarolinaserra@gmail.com": {
+				"id": "paulacarolinaserra@gmail.com",
+				"name": "Paula",
+				"lastName": "Serra",
+				"age": "27",
+				"alias": "Caro",
+				"avatar": "https://i.pinimg.com/564x/30/24/f8/3024f8d283b734bd6b7e4fc5531fe2e9--create-a-cartoon-avatar.jpg"
+			}
+		},
+		"msg": {
+			"1": {
+				"text": "HOLA",
+				"author": "paulacarolinaserra@gmail.com",
+				"date": "8/8/2022, 22:46:27",
+				"id": 1
+			}
+		}
+	},
+	"result": [
+		1
+	]
+}
+

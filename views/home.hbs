@@ -1,0 +1,60 @@
+
+    <div class="col-10 border border-info rounded mx-auto p-2 my-2">
+        <h1>Bienvenido/a {{{username}}}</h1>
+        <button type="button" class="btn btn-outline-info my-1"><a href="/logout">CERRAR SESIÓN</a></button>
+    </div> 
+    <div class="col-10 d-flex flex-nowrap justify-content-around mx-auto">
+        <div class="col-6 border border-info rounded m-2 p-3">
+            <h3 class="text-info">INGRESAR PRODUCTOS:</h3>
+            <form action="/main" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Producto:</label>
+                    <input id="name" name="name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Categoria:</label>
+                    <input id="category" name="category" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Precio:</label>
+                    <input id="price" name="price" class="form-control">
+                </div>    
+                <div class="mb-3">
+                    <label for="img" class="form-label">Imagen:</label>
+                    <input type="url" id="img" name="img" class="form-control">
+                </div>        
+                <button type="submit" id="save" class="btn btn-outline-info">GUARDAR</button>
+                <button type="button" class="btn btn-outline-info"><a href="/products">IR A LISTADO</a></button>
+            </form>
+        </div> 
+        <div class="col-6 border border-info rounded m-2 p-3">
+            <h2 class="text-info my-1 mx-auto">Chat Online</h2>
+            <form class="m-1">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                    <label for="lastName" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                    <label for="age" class="form-label">Edad</label>
+                    <input type="number" class="form-control" id="age" required>
+                    <label for="alias" class="form-label">Alias</label>
+                    <input type="text" class="form-control" id="alias" required>
+                </div>
+                <div class="mb-3">
+                    <label for="avatar" class="form-label">Avatar URL</label>
+                    <input type="text" class="form-control" id="avatar" required>
+                </div>
+                <div class="mb-3">
+                    <label for="text" class="form-label">Escribe tu mensaje:</label>
+                    <input id="text" name="text" class="form-control">
+                </div>
+                <button type="submit" id="send" class="btn btn-outline-info">ENVIAR</button>
+                <button type="button" class="btn btn-outline-info"><a href="/messages">IR Al CHAT</a></button>
+            </form>
+        </div>
+    </div>
+    

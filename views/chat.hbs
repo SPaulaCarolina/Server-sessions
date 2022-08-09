@@ -1,0 +1,15 @@
+
+    <h1 class="text-info">CHAT</h1>
+    {{#each messages }}
+        <p class="border border-info rounded mx-auto my-2">
+        {{#each author}}
+            <img src="{{this.avatar}}" width="30px">
+            <b style="color: blue;">{{this.alias}}</b>
+        {{/each}}
+        {{#each msg}}
+            <span style="color: #645050;">{{this.date}}</span>
+            <em style="color: #36c936;">{{this.text}}</em>
+        {{/each}}
+        </p>
+    {{/each}}
+
