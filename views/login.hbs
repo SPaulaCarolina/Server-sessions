@@ -1,9 +1,13 @@
 
     <div class="col 6 border border-info">
+        <h1>INICIAR SESIÓN</h1>
         <form class="col-6 border border-info rounded mx-auto my-1 p-2" action="/login" method="post">
             <label for="username" class="form-label">INGRESE SU EMAIL:</label>
             <input type="username" id="username" name="username" class="form-control">
-            <button type="submit" id="login" class="btn btn-outline-info my-1">INGRESAR</button>     
+            <label for="password" class="form-label">INGRESE SU PASSWORD:</label>
+            <input type="password" id="password" name="password" class="form-control" autocomplete="off" >
+            <button type="submit" id="login" class="btn btn-outline-info my-1">INGRESAR</button> 
+            ¿No tienes cuenta aún? <a href="/signup">Crear cuenta</a>  
         </form>
     </div>
 
