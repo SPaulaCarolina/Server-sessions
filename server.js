@@ -1,6 +1,9 @@
 const express = require('express')
 const session = require('express-session')
 const mongoose = require('mongoose')
+//Import dotenv
+require('dotenv').config()
+const yargs = require('yargs')(process.argv.slice[2])
 // Import passport & bcryptjs
 const passport = require('passport')
 const localStrategy = require('passport-local').Strategy
@@ -12,8 +15,17 @@ const { Server } = require('socket.io')
 const { engine } = require('express-handlebars')
 //Import Routes
 const authRoutes = require('./routes/auth.route')
+const infoRoutes = require('./routes/info.route')
+const randomRoutes = require('./routes/random.route')
 //PORT
-const PORT = process.env.PORT || 8080;
+const argv = yargs
+    .default({
+        PORT: 8080
+    })
+    .alias({
+        p: 'PORT'
+    })
+    .argv;
 //Model
 const Users = require('./models/userModel')
 //Contenedores
@@ -91,6 +103,9 @@ passport.deserializeUser((id, done) => {
 // Init passport
 app.use(passport.initialize())
 app.use(passport.session())
+// Routes
+app.use('/info', infoRoutes)
+app.use('/api/randoms', randomRoutes)
 //Auth Routes
 app.get('/', authRoutes.getRoot)
 app.get('/login', authRoutes.getLogin)
@@ -180,5 +195,5 @@ connectDB('mongodb://localhost:27017/app', err => {
     if(err) return console.log('Error connecting DB')
 })
 
-const server = httpServer.listen(PORT, () => { console.log( "Server listening..." ) })
+const server = httpServer.listen(argv.PORT, () => { console.log( `Server listening on port ${argv.PORT}`) })
 server.on('error', e => console.log( "Error on server", e ))
