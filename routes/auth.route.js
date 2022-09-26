@@ -1,7 +1,11 @@
+const log4js = require('log4js')
+const logger = log4js.getLogger('info')
+
 function getRoot(req, res) {
     res.render('index')
 }
 function getLogin(req, res) {
+    logger.info(`${req.method}: ${req.url}`)
     if(req.isAuthenticated()) {
         res.send('login-ok')
     } else {

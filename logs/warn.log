@@ -1,0 +1,5 @@
+[2022-09-10T16:57:51.221] [WARN] fileWarn - Fail
+[2022-09-10T16:57:51.223] [ERROR] fileWarn - Failover
+[2022-09-25T20:45:29.517] [WARN] warn - Error 404: GET /fail
+[2022-09-25T20:46:05.243] [WARN] warn - Error 404: GET /fail
+[2022-09-25T20:46:21.248] [WARN] warn - Error 404: GET /fail

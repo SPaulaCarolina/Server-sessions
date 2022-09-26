@@ -1,6 +1,7 @@
 const express = require('express')
 const session = require('express-session')
 const mongoose = require('mongoose')
+const compression = require('compression')
 //Import dotenv
 require('dotenv').config()
 const yargs = require('yargs')(process.argv.slice[2])
@@ -33,12 +34,29 @@ const ProductsDB = require('./containers/containerProducts')
 const productsDB =  new ProductsDB('products')
 const MessagesDB = require('./containers/containerMessages')
 const messagesDB =  new MessagesDB('./DB/messages.json')
+//log4js
+const log4js = require('log4js')
+
+log4js.configure({
+    appenders: {
+        myLoggerConsole: {type: "console"},
+        myLoggerFileWarn: {type: 'file', filename: './logs/warn.log'},
+        myLoggerFileErr: {type: 'file', filename: './logs/error.log'}
+    },
+    categories: {
+        default: {appenders: ['myLoggerConsole'], level: 'all'},
+        info: {appenders: ['myLoggerConsole'], level: 'info'},
+        warn: {appenders: ['myLoggerConsole', 'myLoggerFileWarn'], level: 'warn'},
+        fileErr: {appenders: ['myLoggerConsole', 'myLoggerFileErr'], level: 'error'}
+    }
+})
 //App
 const app = express()
 const httpServer = http.createServer(app)
 //Socket
 const io = new Server(httpServer)
 //Settings
+app.use(compression())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 //Handlebars
@@ -132,8 +150,15 @@ function checkAuth(req, res, next) {
     else res.redirect('/login')
 }
 
-app.get('/home', checkAuth, (req, res) => {
-    res.render('home', {username})
+app.get('/home', checkAuth, async (req, res) => {
+    try {
+        res.render('home', {username})
+        const logger = log4js.getLogger('info');
+        logger.info(`${req.method} ${req.url} OK`)
+    } catch {
+        const logger = log4js.getLogger('error');
+        logger.error(`ERROR: ${req.method}: ${req.url} + ${error}`);
+    }
 })
 app.get('/products', checkAuth, async (req, res) => {
     res.render('products', {
@@ -153,6 +178,12 @@ app.get('/logout', checkAuth, (req, res) => {
 
     return res.render('logout', {username})
 })
+
+app.get('/fail', (req, res) => {
+    const logger = log4js.getLogger('warn');
+    logger.warn(`Error 404: ${req.method} ${req.url}`)
+    res.status(404).send("ERROR: PAGE NOT FOUND.")
+});
 // io
 io.on('connection', socket => {
     console.log('Usuario conectado, ID: ' + socket.id);
