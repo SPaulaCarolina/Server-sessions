@@ -143,6 +143,17 @@ function checkAuth(req, res, next) {
     else res.redirect('/login')
 }
 
+app.get('/', checkAuth, async (req, res) => {
+    try {
+        res.render('home', {username})
+        const logger = log4js.getLogger('info');
+        logger.info(`${req.method} ${req.url} READY`)
+    } catch {
+        const logger = log4js.getLogger('error');
+        logger.error(`ERROR: ${req.method}: ${req.url} + ${error}`);
+    }
+})
+
 app.get('/home', checkAuth, async (req, res) => {
     try {
         res.render('home', {username})
