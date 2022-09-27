@@ -19,14 +19,7 @@ const authRoutes = require('./routes/auth.route')
 const infoRoutes = require('./routes/info.route')
 const randomRoutes = require('./routes/random.route')
 //PORT
-const argv = yargs
-    .default({
-        PORT: 8080
-    })
-    .alias({
-        p: 'PORT'
-    })
-    .argv;
+const PORT = process.env.PORT || 8080
 //Model
 const Users = require('./models/userModel')
 //Contenedores
@@ -226,5 +219,5 @@ connectDB('mongodb://localhost:27017/app', err => {
     if(err) return console.log('Error connecting DB')
 })
 
-const server = httpServer.listen(argv.PORT, () => { console.log( `Server listening on port ${argv.PORT}`) })
+const server = httpServer.listen(PORT, () => { console.log( `Server listening on port ${PORT}`) })
 server.on('error', e => console.log( "Error on server", e ))
