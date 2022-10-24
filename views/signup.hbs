@@ -1,14 +1,22 @@
 
     <div class="col 6 border border-info">
         <h1>CREAR CUENTA</h1>
-        <form class="col-6 border border-info rounded mx-auto my-1 p-2" action="/signup" method="post">
-            <label for="username" class="form-label">INGRESE SU EMAIL:</label>
-            <input type="username" id="username" name="username" class="form-control">
+        <form class="col-6 border border-info rounded mx-auto my-1 p-2" action="/auth/signup" method="post" enctype="multipart/form-data">
+            <label for="email" class="form-label">INGRESE SU EMAIL:</label>
+            <input type="email" id="email" name="email" class="form-control">
             <label for="password" class="form-label">INGRESE SU PASSWORD:</label>
             <input type="password" id="password" name="password" class="form-control" autocomplete="off" >
-            <label for="name" class="form-label">INGRESE SU NOMBRE:</label>
-            <input type="name" id="name" name="name" class="form-control">
+            <label for="username" class="form-label">INGRESE SU NOMBRE DE USUARIO:</label>
+            <input type="username" id="username" name="username" class="form-control">
+            <label for="age" class="form-label">EDAD:</label>
+            <input type="age" id="age" name="age" class="form-control">
+            <label for="adress" class="form-label">DIRECCIÓN:</label>
+            <input type="adress" id="adress" name="adress" class="form-control">
+            <label for="phone" class="form-label">TELÉFONO:</label>
+            <input type="phone" id="phone" name="phone" class="form-control">
+            <label for="image" class="form-label" id="image">CARGAR IMAGEN:</label>
+            <input type="file" class="form-control m-1 p-1" id="image" name="image"/>
             <button type="submit" id="login" class="btn btn-outline-info my-1">INGRESAR</button>
-            ¿Ya tienes una cuenta? <a href="/signup">Iniciar sesión</a>.     
+            ¿Ya tienes una cuenta? <a href="/auth/login">Iniciar sesión</a>.     
         </form>
     </div>

@@ -1,8 +1,54 @@
-
-    <div class="col-10 border border-info rounded mx-auto p-2 my-2">
-        <h1>Bienvenido/a {{{username}}}</h1>
-        <button type="button" class="btn btn-outline-info my-1"><a href="/logout">CERRAR SESIÓN</a></button>
+    
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MyCandyShop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/products">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/cart">MI CARRITO</a>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="btn btn-outline-info my-1"><a href="/home/logout">CERRAR SESIÓN</a></button>
+        </div>
+    </nav>
+    <div class="col-10 border border-info rounded mx-auto my-2">
+            <h1>Bienvenido/a {{username}}</h1>
     </div> 
+    <div class="col-10 mx-auto">
+        {{#if listExist}}
+            <h4>NO SE GUARDARON PRODUCTOS.</h4>
+        {{else}}
+            <div class="col-12 d-flex flex-wrap mx-auto">
+                {{#each products}}
+                    <div class="card col-3 mx-auto" style="width: 8rem;">
+                        <img src="{{this.img}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.name}}</h5>
+                            <ul>
+                                <li class="list-group-item">{{this.category}}</li>
+                                <li class="list-group-item">{{this.id}}</li>
+                                <li class="list-group-item">${{this.price}}</li>
+                            </ul>  
+                        </div>  
+                        <div class="card-body">
+                            <a href="/detail/{{this.id}}" class="card-link">VER DETALLE</a>
+                            <button type="submit" id="{{this.id}}" class="btnAdd btn btn-outline-info"><a href="/cart/{{this.id}}">AÑADIR</a></button>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{/if}}
+    </div>
     <div class="col-10 d-flex flex-nowrap justify-content-around mx-auto">
         <div class="col-6 border border-info rounded m-2 p-3">
             <h3 class="text-info">INGRESAR PRODUCTOS:</h3>

@@ -1,0 +1,217 @@
+[2022-10-15T17:42:01.921] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-15T17:42:04.362] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-15T17:57:45.244] [ERROR] err - MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.Connection.openUri (C:\Users\paula\serrapaula-09\node_modules\mongoose\lib\connection.js:694:11)
+    at C:\Users\paula\serrapaula-09\node_modules\mongoose\lib\index.js:380:10
+    at C:\Users\paula\serrapaula-09\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\paula\serrapaula-09\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+    at Mongoose._promiseOrCallback (C:\Users\paula\serrapaula-09\node_modules\mongoose\lib\index.js:1225:10)
+    at Mongoose.connect (C:\Users\paula\serrapaula-09\node_modules\mongoose\lib\index.js:379:20)
+    at connectDB (C:\Users\paula\serrapaula-09\server.js:13:18)
+    at Object.<anonymous> (C:\Users\paula\serrapaula-09\server.js:21:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+[2022-10-15T17:57:46.935] [ERROR] err - Error trying to connect with DB: ReferenceError: mongo is not defined
+[2022-10-15T17:57:48.387] [ERROR] err - Error trying to connect with DB: ReferenceError: mongoU is not defined
+[2022-10-15T17:57:51.680] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-15T17:57:54.547] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-15T17:58:01.990] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-15T17:58:13.792] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-15T17:58:20.501] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-15T17:58:36.539] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-15T17:58:44.961] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-15T18:00:15.979] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-15T18:01:20.503] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-15T18:08:42.305] [ERROR] err - MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:207:30)
+    at MessageStream.<anonymous> (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\connection.js:60:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (C:\Users\paula\serrapaula-09\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  [Symbol(errorLabels)]: Set(1) { 'HandshakeError' }
+}
+[2022-10-18T23:13:41.317] [ERROR] err - ERROR: GET: / + ReferenceError: username is not defined
+[2022-10-18T23:18:46.760] [ERROR] err - ERROR: GET: / + ReferenceError: username is not defined
+[2022-10-19T00:02:59.807] [ERROR] err - ERROR: GET: /logout + ReferenceError: username is not defined
+[2022-10-19T00:03:04.444] [ERROR] err - ERROR: GET: /logout + ReferenceError: username is not defined
+[2022-10-19T00:03:52.245] [ERROR] err - ERROR: GET: /logout + ReferenceError: username is not defined
+[2022-10-19T00:18:40.112] [ERROR] err - ERROR: GET: /logout + ReferenceError: username is not defined
+[2022-10-19T00:19:13.478] [ERROR] err - ERROR: GET: /logout + ReferenceError: username is not defined
+[2022-10-19T00:27:27.876] [ERROR] err - ERROR: GET: /logout + ReferenceError: username is not defined
+[2022-10-21T23:00:44.223] [ERROR] err - ERROR: GET: /logout + ReferenceError: username is not defined
+[2022-10-21T23:46:55.416] [ERROR] err - ERROR: GET: / + ReferenceError: username is not defined
+[2022-10-22T23:30:57.592] [ERROR] err - ERROR: GET: / + ReferenceError: productsDB is not defined
+[2022-10-22T23:31:17.661] [ERROR] err - ERROR: GET: / + ReferenceError: productsDB is not defined

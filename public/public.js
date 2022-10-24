@@ -1,5 +1,8 @@
+//const btnLogin = document.getElementById("login")
 const btnSave = document.getElementById("save")
 const btnSend = document.getElementById("send")
+const btnAdd = document.getElementsByClassName("btnAdd")
+const btnLogout = document.getElementById("logout")
 const socket = io();
 
 btnSave.onclick = e => {
@@ -29,6 +32,13 @@ btnSend.onclick = e => {
     console.log(msg)
     socket.emit('chat-in', msg)
 }
+
+btnAdd.onclick = e => {
+    e.preventDefault()
+    selected = event.target.id
+    user
+}
+
 socket.on('show', products => {
     console.log(products)
 

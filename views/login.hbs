@@ -1,13 +1,13 @@
 
-    <div class="col 6 border border-info">
-        <h1>INICIAR SESIÓN</h1>
-        <form class="col-6 border border-info rounded mx-auto my-1 p-2" action="/login" method="post">
-            <label for="username" class="form-label">INGRESE SU EMAIL:</label>
+    <div class="col-12 border border-info">
+        <h1 class="text-center my-1">INICIAR SESIÓN</h1>
+        <form class="col-6 border border-info rounded mx-auto my-1 p-2" action="/auth/login" method="post">
+            <label for="username" class="form-label">INGRESE SU NOMBRE DE USUARIO:</label>
             <input type="username" id="username" name="username" class="form-control">
             <label for="password" class="form-label">INGRESE SU PASSWORD:</label>
             <input type="password" id="password" name="password" class="form-control" autocomplete="off" >
             <button type="submit" id="login" class="btn btn-outline-info my-1">INGRESAR</button> 
-            ¿No tienes cuenta aún? <a href="/signup">Crear cuenta</a>  
+            ¿No tienes cuenta aún? <a href="/auth/signup">Crear cuenta</a>  
         </form>
     </div>
 

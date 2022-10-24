@@ -1,7 +1,7 @@
 const info_router =  require('express').Router()
 const { fork } = require('child_process')
 
-info_router.get('/', ( req, res) => {
+info_router.get('/', (req, res) => {
     res.json({
         "Argumentos de entrada": process.argv,
         "Nombre de la plataforma": process.platform,
